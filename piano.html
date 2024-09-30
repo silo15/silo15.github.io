@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css"> 
+
+#RedBlock{
+	width:20px;
+	height:100px;
+	background-color:red;
+	border:1px solid black;
+
+
+}
+#BlueCircle{
+	width:50px;
+	height:65px;
+	background-color:blue;
+	border:1px solid black;
+	border-radius:75%;
+}
+
+.RightLeg{
+	width:10px;
+	height:60px;
+	background-color:green;
+	border:1px solid black;
+	position:relative;
+	top:-65px;
+	right:-15px;
+	transform:rotate(-20deg);
+}
+
+.LeftLeg{
+	width:10px;
+	height:60px;
+	background-color:green;
+	border:1px solid black;
+	position:relative;
+	top:-5px;
+	right:15px;
+	transform:rotate(20deg);
+}
+
+#BlueCircle:hover{
+transform: rotate(180deg);
+transition:2s;
+}
+
+#LeftArm{
+	width:10px;
+	height:80px;
+	background-color:yellow;
+	border:1px solid black;
+	position:relative;
+	top:-240px;
+	right:35px;
+	transform:rotate(140deg);
+
+}
+
+#RightArm{
+	width:10px;
+	height:80px;
+	background-color:yellow;
+	border:1px solid black;
+	position:relative;
+	top:-320px;
+	right:-35px;
+	transform:rotate(-140deg);
+}
+
+
+</style>
+</head>
+<center>
+<body>
+	<div id="BlueCircle"> </div>
+	<div id="RedBlock"> </div>
+	<div class="LeftLeg"> </div>
+	<div class = "RightLeg"> </div>
+	<div id = "LeftArm"> </div>
+	<div id = "RightArm"> </div>
+
+</body>
+</center>
+</html>
