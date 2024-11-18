@@ -1,0 +1,31 @@
+<html>
+<head>
+<style type="text/css">
+	.vegetables{
+		width:100px;
+		height:100px;
+		margin:5px;
+		display:inline-block;
+		background-image:url(https://www.gimmesomeoven.com/wp-content/uploads/2017/03/How-To-Cut-Broccoli.jpg);
+		background-size:contain;
+		font-size:40px;
+	}
+
+</style>
+</head>
+<body>
+	<center> <h1>Eat your vegetables!</h1> </center>
+	<script type="text/javascript">
+		let vegetableCounter = 0
+
+		function makeBroccoli(){
+			vegetableCounter = vegetableCounter+1
+			let broccoli = document.createElement("div")
+			document.body.appendChild(broccoli)
+			broccoli.classList.add("vegetables")
+		}
+
+	setInterval(makeBroccoli, 1000)
+	</script>
+</body>
+</html>

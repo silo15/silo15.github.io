@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		#monkey{
+			width:100px;
+			height:100px;
+			background-color: purple;
+
+			animation-name:bob;
+			animation-duration:5s;
+			animation-iteration-count:infinite;
+			position:absolute;
+		}
+
+		@keyframes bob{
+		0%{
+				left:40px;
+				top:0px;
+				background-color:purple;
+			}
+		50%{
+			left:100px;
+			top:200px;
+			background-color:yellow;
+			border-radius:30%;
+		}
+		75%{
+		background-color:orange;
+		border-radius:90%;
+		}
+	}
+	</style>
+</head>
+<body>
+<div id = "monkey"> </div>
+<div id = "banana"> </div>
+
+</body>
+</html>
