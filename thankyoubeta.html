@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css"> 
+	.confetti{
+		width:10px;
+		height:10px;
+		background-color:magenta;
+		display:inline-block;
+		margin:2px;
+	}
+</style>
+<center> <h1> Gracias para las clases muy divertidas </h1> </center>
+</head>
+<body>
+	<script type="text/javascript">
+	function makeConfetti(){
+		let confetti=document.createElement("div")
+		document.body.appendChild(confetti)
+		confetti.classList.add("confetti")
+
+		confetti.style.width = Math.random()*20+"px"
+		confetti.style.height=Math.random()*20+"px"
+		confetti.style.left=Math.random()*1000 + "px"
+		confetti.style.right=Math.random()*1000+"px"
+
+		function fall(){
+			confetti.style.top=parseInt(confetti.style.top)+100(Math.random())+"px"
+		}
+		setInterval(fall, 100)
+	}
+	for(let i=0; i<1001; i=i+1){makeConfetti()
+	}
+</script>
+</body>
+</html>

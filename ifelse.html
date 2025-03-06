@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css"> 
+#box{
+	width:200px;
+	height:200px;
+	background-color:blue;
+}
+</style>
+</head>
+
+<body>
+	<audio id="sound" src='audioFile.mp3'></audio>
+
+<div id="box"> </div>
+
+<script type="text/javascript">
+	let switch = true
+box.addEventListener("click", function(){
+	if(lightswitch==true){
+		sound.play()
+		lightswitch = false
+	}
+
+	else if(lightswitch==false){}
+		sound.pause()
+		lightswitch = true
+})
+</script>
+</body>
+</html>

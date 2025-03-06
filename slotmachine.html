@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type=text/css> 
+		.square{
+			width: 100px;
+			height:100px;
+			margin: 5px;
+			border: solid black 2px;
+			display:inline-block;
+		}
+
+		#handle{
+			width: 20px;
+			height: 100px;
+			margin:5px;
+			border: solid black 2px;
+			display: inline-block;
+		}
+	</style>
+
+</head>
+<body>
+	<div id ="square1" class="square"> </div>
+	<div id="square2" class="square"> </div>
+	<div id="square3"class="square"> </div>
+	<div id="handle"> </div>
+	<div id="scoreboard"> </div>
+
+	<script type="text/javascript"> 
+		var images = ["blue", "magenta", "green", "yellow", "purple", "orange", "red", "pink", "brown", "black", "teal"]
+		let score = 0
+		handle.addEventListener("click", function(){
+			let random = Math.floor(Math.random()*10)
+			let random2 = Math.floor(Math.random()*10)
+			let random3 = Math.floor(Math.random()*10)
+
+			square1.style.backgroundColor = images[random]
+			square2.style.backgroundColor = images[random2]
+			square3.style.backgroundColor = images[random3]
+			
+
+			if(square1.style.backgroundColor==square2.style.backgroundColor==square3.style.backgroundColor){
+				score=score+50
+				alert(score)
+			}
+			else if(square1.style.backgroundColor==square2.style.backgroundColor){
+				score = score+10
+				alert(score)
+			}
+			else if(square2.style.backgroundColor==square3.style.backgroundColor){
+				score = score+10
+				alert(score)
+			}
+			else if(square1.style.backgroundColor==square3.style.backgroundColor){
+				score = score+10
+				alert(score)
+			}
+
+
+			})
+
+
+	</script>
+
+	<style type="text/css"> 
+		#scoreboard{
+			width:20px
+			height:20px;
+			margin:5pxd
+			display:inline-block;
+			scoreboard.innerText = score
+		}
+
+	</style>
+
+
+</body>
+</html>
