@@ -2,13 +2,35 @@
 <html>
 <head>
 	<style type="text/css"> 
+		body{
+			background-image:url(secretroom.jpeg);
+			background-size:contain;
+
+		}
+		#safe{
+			width:600px;
+			height:600px;
+			background-image:url(newsafe.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+			position:relative;
+		}
+
 		#bottle{
-			width:400px;
-			height:1000px;
+			width:100px;
+			height:250px;
 			background-image:url(formula.png);
 			background-repeat:no-repeat;
+			background-size:contain;
 			position: relative;
+			top:-300px;
+			right:80px;
 			transition:1s;
+			transform:rotate(70deg);
+		}
+
+		#bottle:hover{
+			transform:rotate(360deg);
 		}
 
 	</style>
@@ -16,11 +38,12 @@
 <body>
 
 	<center>
-<a href="journal.html"><div id="bottle"> </div> </a>
+		<h2> Super Secret Room </h2>
+	<div id="safe"> </div>
+<a href="journal.html"> <div id="bottle"> </div> </a>
 </center>
 	<script type="text/javascript">
 		bottle.addEventListener("click", function(){
-			bottle.style.transform="rotate(360deg)"
 		})
 
 	</script>
