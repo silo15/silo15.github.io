@@ -2,7 +2,7 @@
 <html>
 <head>
 	<style type="text/css">
-		.cookie{
+		#cookie{
 			width:100px;
 			height:100px;
 			background-color:burlywood;
@@ -67,10 +67,7 @@
 		.cookie:hover{
 			width:125px;
 			height:125px;
-			.chip{
-				width:6.5px;
-				height:6.5px;
-			}
+			
 		}
 
 
@@ -78,7 +75,7 @@
 </head>
 <body>
 <center> 
-<div class = "cookie">
+<div id = "cookie">
 <div id="chip1" class = "chip"> </div>
 <div id="chip2" class = "chip"> </div>
 <div id="chip3" class = "chip"> </div>
@@ -93,13 +90,17 @@
 
 </center>
 <center>
-<heading2>
+<h2 id = "heading">
 	<br> Click for a free cookie!
-</heading2>
+</h2>
 </center>
 <script type = "text/javascript">
-	cookie.addEventListener("click", function{
-		cookie.style.backgroundImage=url(cookiemonster.jpeg)
+
+	cookie.addEventListener("click", function(){
+		cookie.style.backgroundImage="url(cookiemonster.jpeg)"
+		cookie.style.width="700px"
+		cookie.style.height="700px"
+		heading.innerText=""
 	})
 
 </script>
