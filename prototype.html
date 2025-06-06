@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+		background-color:mediumpurple;
+	}
+		.exercise{
+		padding-top:50px;
+
+		width:120px;
+		height:100px;
+		background-color: seagreen;
+		margin:5px;
+		background-position:center;
+		background-size:contain;
+		background-repeat: no-repeat;
+		text-align:center;
+		color:black;
+
+	}
+
+	#wallpushup{
+			background-image:url(https://www.adlsmartcare.co.uk/adlsmartcare/Upload/products/Wall_press_with_tricep_focus_M.gif);
+
+	}
+
+
+
+	#incline{
+		background-image:url(https://media.self.com/photos/59a6e77bfff2d961a4bc4b8d/master/w_320%2Cc_limit/14.gif);
+	}
+
+	#standard{
+		background-image:url(https://i.pinimg.com/originals/fd/bb/09/fdbb092b58863e5c86fdb8bb1411fcea.gif);
+}
+	#diamond{
+		background-image:url(https://images.ctfassets.net/6ilvqec50fal/3hTY3FIEwYdNloN5V3HL7G/26e28de169b01e5e79332e5418803470/Diamond_Push-Up_GIF.gif);
+	}
+
+	#explosive{
+		background-image:url(https://hips.hearstapps.com/hmg-prod/images/workouts/2016/03/explosivepushup-1457102261.gif?crop=1xw:1xh;center,top&resize=1200:*);
+	}
+
+	#archer{
+		background-image:url(https://www.workedoutfitness.com/static/images/archer-push-up.gif);
+	}
+
+	#onearm{
+		background-image:url(https://www.calistenia.net/wp-content/uploads/2014/12/one-arm_push-up-demostraci%C3%B3n.gif);
+	}
+	}
+
+	p{
+		background-color:rgba(255, 255, 255, 0.8);
+	}
+
+
+</style>
+</head>
+<body>
+	<h1> Push! </h1>
+	<h4> Choose an exercise below and click start! Do as many reps as you can, and type how many you got done by clicking on the exercise. Click the rest timer to take a break.
+	<h2> Set Number: <span id="sets"></span> </h2>
+	<center>
+	<button id="startbutton"> Start </button>
+<div id = "wallpushup" class="exercise"> <p>Wall push-up</p></div>
+
+<div id = "incline" class="exercise">
+ <p>Incline push-up</p> 
+</div>
+
+<div id = "standard" class="exercise"> Standard push-up </div>
+
+<div id = "diamond" class="exercise"> Diamond push-up</div>
+
+<div id = "explosive" class="exercise"> Explosive push-up </div>
+
+<div id = "archer" class="exercise"> Archer push-up </div>
+
+<div id = "onearm" class="exercise"> One-arm pushup </div>
+
+<button id=restbutton>rest timer</button>
+ <audio id="myAudio" src="Spaceman.mp3"></audio>
+</center>
+
+<script type="text/javascript">
+	let SetNumber=0
+	sets.innerText=SetNumber
+	let resttime = 120
+	function countdown(){
+		resttime=resttime-1
+		restbutton.innerText=resttime
+		if (resttime<1){
+			restbutton.innerText="resttimer"
+			resttime=120
+			return
+		}
+	}
+	startbutton.addEventListener('click', function() {
+       myAudio.play();
+   });
+	restbutton.addEventListener("click", function(){
+		setInterval(countdown,1000)
+		myAudio.pause();
+	})
+	wallpushup.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+			SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+
+	incline.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+		SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+
+	standard.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+			SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+
+		diamond.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+			SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+
+		explosive.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+			SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+
+		archer.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+			SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+
+		onearm.addEventListener("click", function(){
+		var Reps = prompt("Reps Completed?")
+		if (Reps<3){
+			alert("Rest and go back a level!")
+			SetNumber = SetNumber+1
+			sets.innerText=SetNumber
+
+		} else if (Reps > 2 && Reps < 13){
+			alert("Take a rest and do it again!")
+			SetNumber = SetNumber+1
+		} else{
+			alert("Rest and advance a level!")
+		}
+
+
+	})
+</script>
+</body>
+</html>
